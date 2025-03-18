@@ -281,7 +281,7 @@ class SmartSlit:
         # 调用求解器求解
         pro_time = time.strftime("%Y%m%d%H%M%S", time.localtime())
         # 输出lp文件
-        prob.writeLP(f'./res/{pro_time}.lp')
+        # prob.writeLP(f'./res/{pro_time}.lp')
         # 复杂问题调用glpk.exe求解器求解
         # solver = GLPK_CMD(path='./glpk/w32/glpsol.exe', msg=False)
         # prob.solve(solver)
