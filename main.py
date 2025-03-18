@@ -13,6 +13,7 @@ st.set_page_config(page_title="分切排刀辅助工具", page_icon="🔀")
 st.title("分切排刀辅助工具")
 
 st.markdown(f"> 作者：@{author}，邮箱：{mail}")
+st.write('使用教程请查看左侧边栏')
 
 with open('./HELP.md', 'r', encoding='utf-8') as f:
     st.sidebar.markdown(f.read())
