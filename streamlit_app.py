@@ -44,8 +44,9 @@ if indeed_file is not None:
 
 indeed_data = st.data_editor(data=default_df, num_rows="dynamic", use_container_width=True)
 
-indeed_data_csv = indeed_data.to_csv(index=False).encode('utf-8')
-st.download_button(label="保存需求数据", data=indeed_data_csv, file_name="需求数据.csv",mime="csv", icon=":material/download:",)
+indeed_data_csv = save_data(indeed_data)
+with open(indeed_data_csv, 'rb') as f:
+    st.download_button(label="保存需求数据", data=f, file_name=os.path.basename(indeed_data_csv),)
 if st.button("开始分切排刀", type="primary"):
     # 计算分切排刀方案
     smart_slit = SmartSlit(indeed_data, semi_data, loss_4, loss_8)
