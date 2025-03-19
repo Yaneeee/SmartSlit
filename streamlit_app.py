@@ -21,9 +21,9 @@ with open('./HELP.md', 'r', encoding='utf-8') as f:
 st.subheader("输入损耗：")
 col1, col2 = st.columns(2)
 with col1:
-    loss_4 = st.number_input("一刀切4颗半成品损耗/mm", value=5, step=1)
+    loss_4 = st.number_input("一刀切4颗半成品损耗/mm", value=5, step=5)
 with col2:
-    loss_8 = st.number_input("一刀切8颗半成品损耗/mm", value=10, max_value=25, step=1)
+    loss_8 = st.number_input("一刀切8颗半成品损耗/mm", value=10, max_value=25, step=5)
 
 if loss_4 > loss_8:
     st.error("一刀切4颗半成品损耗不能大于一刀切8颗半成品损耗！")
