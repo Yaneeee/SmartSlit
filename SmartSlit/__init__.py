@@ -6,7 +6,7 @@ from typing import List, Tuple
 import pandas as pd
 from pandas import DataFrame
 
-from pulp import LpProblem, LpVariable, LpMinimize, LpInteger, lpSum, LpStatus, value, GLPK_CMD, glpk_path
+from pulp import LpProblem, LpVariable, LpMinimize, LpInteger, lpSum, LpStatus, value, GLPK_CMD
 
 
 def get_combine(
